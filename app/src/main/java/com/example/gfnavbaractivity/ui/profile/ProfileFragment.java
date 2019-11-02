@@ -1,4 +1,4 @@
-package com.example.gfnavbaractivity.ui.dashboard;
+package com.example.gfnavbaractivity.ui.profile;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -6,25 +6,25 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.gfnavbaractivity.R;
+import com.example.gfnavbaractivity.ui.schedule.ScheduleViewModel;
 
-public class DashboardFragment extends Fragment {
+public class ProfileFragment extends Fragment {
 
-    private DashboardViewModel dashboardViewModel;
+    private ProfileViewModel profileViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        dashboardViewModel =
-                ViewModelProviders.of(this).get(DashboardViewModel.class);
+        profileViewModel = ViewModelProviders.of(this).get(ProfileViewModel.class);
         View root = inflater.inflate(R.layout.profile, container, false);
         final TextView textView = root.findViewById(R.id.text_profile);
-        dashboardViewModel.getText().observe(this, new Observer<String>() {
+        profileViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

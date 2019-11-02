@@ -3,11 +3,11 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/text_map"
+        android:id="@+id/text_session"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="Map"
+        android:text="Session"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
 </RelativeLayout>
