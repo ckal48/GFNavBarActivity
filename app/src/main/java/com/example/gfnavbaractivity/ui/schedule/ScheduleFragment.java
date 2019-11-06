@@ -1,4 +1,4 @@
-package com.example.gfnavbaractivity.ui.notifications;
+package com.example.gfnavbaractivity.ui.schedule;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,16 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.gfnavbaractivity.R;
 
-public class NotificationsFragment extends Fragment {
+public class ScheduleFragment extends Fragment {
 
-    private NotificationsViewModel notificationsViewModel;
+    private ScheduleViewModel scheduleViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        notificationsViewModel =
-                ViewModelProviders.of(this).get(NotificationsViewModel.class);
-        View root = inflater.inflate(R.layout.map, container, false);
-        final TextView textView = root.findViewById(R.id.text_profile);
-        notificationsViewModel.getText().observe(this, new Observer<String>() {
+        scheduleViewModel = ViewModelProviders.of(this).get(ScheduleViewModel.class);
+        View root = inflater.inflate(R.layout.schedule, container, false);
+        final TextView textView = root.findViewById(R.id.text_schedule);
+        scheduleViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
