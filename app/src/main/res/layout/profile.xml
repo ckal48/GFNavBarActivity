@@ -3,90 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    <TextView
+        android:id="@+id/text_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Profile"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-        <EditText
-            android:layout_width = "100dp"
-            android:layout_height = "wrap_content"
-            android:layout_marginLeft = "30dp"
-            android:layout_marginTop = "70dp"
-            android:background = "null"
-            android:text = "Name:"
-            />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width = "350dp"
-            android:layout_height = "50dp"
-            android:layout_marginTop = "5dp"
-            android:layout_marginLeft ="30dp"
-            />
-
-        <EditText
-            android:layout_width = "100dp"
-            android:layout_height = "wrap_content"
-            android:layout_marginLeft = "30dp"
-            android:layout_marginTop = "20dp"
-            android:background = "null"
-            android:text = "Major: "
-            />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width = "350dp"
-            android:layout_height = "50dp"
-            android:layout_marginTop = "5dp"
-            android:layout_marginLeft ="30dp"
-            />
-
-        <EditText
-            android:layout_width = "100dp"
-            android:layout_height = "wrap_content"
-            android:layout_marginLeft = "30dp"
-            android:layout_marginTop = "20dp"
-            android:background = "null"
-            android:text = "Motto: "
-            />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width = "350dp"
-            android:layout_height = "50dp"
-            android:layout_marginTop = "5dp"
-            android:layout_marginLeft ="30dp"
-            />
-
-        <EditText
-            android:layout_width = "200dp"
-            android:layout_height = "wrap_content"
-            android:layout_marginLeft = "30dp"
-            android:layout_marginTop = "20dp"
-            android:background = "null"
-            android:text = "Place to find me most: "
-            />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width = "350dp"
-            android:layout_height = "50dp"
-            android:layout_marginTop = "5dp"
-            android:layout_marginLeft ="30dp"
-            />
-
-        <EditText
-            android:layout_width = "200dp"
-            android:layout_height = "wrap_content"
-            android:layout_marginLeft = "30dp"
-            android:layout_marginTop = "70dp"
-            android:background = "null"
-            android:text = "Description: "
-            />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width = "350dp"
-            android:layout_height = "100dp"
-            android:layout_marginTop = "5dp"
-            android:layout_marginLeft ="30dp"
-            />
-
-    </LinearLayout>
 </RelativeLayout>
