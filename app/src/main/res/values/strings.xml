@@ -4,4 +4,12 @@
     <string name="title_profile">Profile</string>
     <string name="title_map">Map</string>
     <string name="title_session">Session</string>
+    <string name="major">Major:</string>
+    <string name="name">Name:</string>
+    <string name="motto">Motto:</string>
+    <string name="place_to_find_me_most">Place to find me most:</string>
+    <string name="description">Description:</string>
+    <string name="create">Create</string>
+    <string name="edit">Edit</string>
+    <string name="invite">Invite</string>
 </resources>

@@ -1,91 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
 
         <EditText
             android:layout_width = "100dp"
             android:layout_height = "wrap_content"
-            android:layout_marginLeft = "30dp"
+            android:layout_marginStart = "30dp"
             android:layout_marginTop = "70dp"
             android:background = "null"
-            android:text = "Name:"
-            />
+            android:text = "@string/name"
+            android:importantForAutofill="no"
+            android:inputType="TODO"
+            tools:ignore="LabelFor,TextFields" />
+
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width = "350dp"
             android:layout_height = "50dp"
             android:layout_marginTop = "5dp"
-            android:layout_marginLeft ="30dp"
+            android:layout_marginStart ="30dp"
             />
 
         <EditText
             android:layout_width = "100dp"
             android:layout_height = "wrap_content"
-            android:layout_marginLeft = "30dp"
+            android:layout_marginStart = "30dp"
             android:layout_marginTop = "20dp"
             android:background = "null"
-            android:text = "Major: "
-            />
+            android:text = "@string/major"
+            android:importantForAutofill="no"
+            android:inputType="TODO"
+            tools:ignore="LabelFor,TextFields" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width = "350dp"
             android:layout_height = "50dp"
             android:layout_marginTop = "5dp"
-            android:layout_marginLeft ="30dp"
+            android:layout_marginStart ="30dp"
             />
 
         <EditText
             android:layout_width = "100dp"
             android:layout_height = "wrap_content"
-            android:layout_marginLeft = "30dp"
+            android:layout_marginStart = "30dp"
             android:layout_marginTop = "20dp"
             android:background = "null"
-            android:text = "Motto: "
-            />
+            android:text = "@string/motto"
+            android:importantForAutofill="no"
+            android:inputType="TODO"
+            tools:ignore="LabelFor,TextFields" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width = "350dp"
             android:layout_height = "50dp"
             android:layout_marginTop = "5dp"
-            android:layout_marginLeft ="30dp"
+            android:layout_marginStart ="30dp"
             />
 
         <EditText
             android:layout_width = "200dp"
             android:layout_height = "wrap_content"
-            android:layout_marginLeft = "30dp"
+            android:layout_marginStart = "30dp"
             android:layout_marginTop = "20dp"
             android:background = "null"
-            android:text = "Place to find me most: "
-            />
+            android:text = "@string/place_to_find_me_most"
+            android:importantForAutofill="no"
+            android:inputType="TODO"
+            tools:ignore="LabelFor,TextFields" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width = "350dp"
             android:layout_height = "50dp"
             android:layout_marginTop = "5dp"
-            android:layout_marginLeft ="30dp"
+            android:layout_marginStart ="30dp"
             />
 
         <EditText
             android:layout_width = "200dp"
             android:layout_height = "wrap_content"
-            android:layout_marginLeft = "30dp"
+            android:layout_marginStart = "30dp"
             android:layout_marginTop = "70dp"
             android:background = "null"
-            android:text = "Description: "
-            />
+            android:text = "@string/description"
+            android:inputType="TODO"
+            android:importantForAutofill="no"
+            tools:ignore="LabelFor,TextFields" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width = "350dp"
             android:layout_height = "100dp"
             android:layout_marginTop = "5dp"
-            android:layout_marginLeft ="30dp"
+            android:layout_marginStart ="30dp"
             />
 
     </LinearLayout>
