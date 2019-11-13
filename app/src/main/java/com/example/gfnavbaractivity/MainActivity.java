@@ -15,29 +15,12 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ListView listView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         BottomNavigationView navView = findViewById(R.id.nav_view);
 
-        /*listView = findViewById(R.id.schedule_listView); //has an error in this that shuts screen down immediately
-
-        ArrayList<String> classes = new ArrayList<>();
-
-        classes.add("CSI 2400");
-        classes.add("CSI 2999");
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(
-                this,
-                android.R.layout.simple_list_item_1,
-                classes
-        );
-
-        listView.setAdapter(adapter);
-*/
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
