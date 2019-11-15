@@ -7,7 +7,7 @@
     android:id="@+id/container">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nav_view"
+        android:id="@+id/bottom_navigation"
         android:layout_width="404dp"
         android:layout_height="0dp"
         android:background="?android:attr/windowBackground"
@@ -23,14 +23,13 @@
 
 
     <fragment
-        android:id="@+id/nav_host_fragment"
+        android:id="@+id/fragment_container"
         android:name="androidx.navigation.fragment.NavHostFragment"
-
         android:layout_width="414dp"
         android:layout_height="674dp"
         android:layout_marginBottom="32dp"
         app:defaultNavHost="true"
-        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
