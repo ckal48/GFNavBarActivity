@@ -1,7 +1,10 @@
 package com.example.gfnavbaractivity;
 
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.MenuItem;
+import android.widget.Toast;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,7 +21,11 @@ public class MainActivity extends AppCompatActivity {
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                new ScheduleFragment()).commit();
+                new StartFragment()).commit();
+
+        Toast startmessage = Toast.makeText(getApplicationContext(), "Welcome to GrizzFinder! Click to continue",Toast.LENGTH_LONG);
+        startmessage.setGravity(Gravity.BOTTOM,0,250);
+        startmessage.show();
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
