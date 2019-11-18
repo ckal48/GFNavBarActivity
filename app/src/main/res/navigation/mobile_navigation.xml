@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_schedule"
-        android:name="com.example.gfnavbaractivity.ui.schedule.ScheduleFragment"
+        android:name="com.example.gfnavbaractivity.ScheduleFragment"
         android:label="@string/title_schedule"
         tools:layout="@layout/schedule" >
 
@@ -15,7 +15,7 @@
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.example.gfnavbaractivity.ui.profile.ProfileFragment"
+        android:name="com.example.gfnavbaractivity.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/profile" >
 
@@ -23,7 +23,7 @@
 
     <fragment
         android:id="@+id/navigation_map"
-        android:name="com.example.gfnavbaractivity.ui.map.MapFragment"
+        android:name="com.example.gfnavbaractivity.MapFragment"
         android:label="@string/title_map"
         tools:layout="@layout/map" >
 
@@ -31,7 +31,7 @@
 
     <fragment
         android:id="@+id/navigation_session"
-        android:name="com.example.gfnavbaractivity.ui.session.SessionFragment"
+        android:name="com.example.gfnavbaractivity.SessionFragment"
         android:label="@string/title_session"
         tools:layout="@layout/session" >
 

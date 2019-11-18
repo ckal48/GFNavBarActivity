@@ -1,52 +1,62 @@
 package com.example.gfnavbaractivity;
 
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.view.Gravity;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
-import java.util.ArrayList;
+import androidx.fragment.app.Fragment;
 
 public class MainActivity extends AppCompatActivity {
-
-    private ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        BottomNavigationView navView = findViewById(R.id.nav_view);
 
-        listView = findViewById(R.id.schedule_listView);
+        BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
+        bottomNav.setOnNavigationItemSelectedListener(navListener);
 
-        ArrayList<String> classes = new ArrayList<>();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                new StartFragment()).commit();
 
-        classes.add("CSI 2400");
-        classes.add("CSI 2999");
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(
-                this,
-                android.R.layout.simple_list_item_1,
-                classes
-        );
-
-        listView.setAdapter(adapter);
-
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_schedule, R.id.navigation_profile, R.id.navigation_map, R.id.navigation_session)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(navView, navController);
+        Toast startmessage = Toast.makeText(getApplicationContext(), "Welcome to GrizzFinder! Click to continue",Toast.LENGTH_LONG);
+        startmessage.setGravity(Gravity.BOTTOM,0,250);
+        startmessage.show();
     }
+
+    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
+            new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                    Fragment selectedFragment = null;
+
+                    switch (item.getItemId()){
+                        case R.id.navigation_schedule:
+                            selectedFragment = new ScheduleFragment();
+                            break;
+                        case R.id.navigation_profile:
+                            selectedFragment = new ProfileFragment();
+                            break;
+                        case R.id.navigation_map:
+                            selectedFragment = new MapFragment();
+                            break;
+                        case R.id.navigation_session:
+                            selectedFragment = new SessionFragment();
+                            break;
+                    }
+
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                            selectedFragment).commit();
+
+                    return true;
+
+
+                }
+            };
 
 }
 
