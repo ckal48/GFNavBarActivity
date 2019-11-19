@@ -11,12 +11,34 @@
         android:layout_centerHorizontal="true"
         android:contentDescription="@null"/>
 
-    <TextView
-        android:id="@+id/text_session"
+    <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Session"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        android:background="#808080"
+        android:text="Create"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="260dp"
+        android:textColor="#FFFF"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#808080"
+        android:text="Edit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="340dp"
+        android:textColor="#FFFF"/>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#808080"
+        android:text="Invite"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="430dp"
+        android:textColor="#FFFF"/>
 
 </RelativeLayout>
