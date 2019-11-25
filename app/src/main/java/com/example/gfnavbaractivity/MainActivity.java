@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -17,8 +18,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
+        BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation); //bottom nav bar
         bottomNav.setOnNavigationItemSelectedListener(navListener);
+
+
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new StartFragment()).commit();
