@@ -10,8 +10,22 @@
         android:name="com.example.gfnavbaractivity.ScheduleFragment"
         android:label="@string/title_schedule"
         tools:layout="@layout/schedule" >
-
+        <action
+            android:id="@+id/action_navigation_schedule_to_navigation_addClass"
+            app:destination="@id/navigation_addClass" />
     </fragment>
+
+    <fragment
+        android:id="@+id/navigation_addClass"
+        android:name="com.example.gfnavbaractivity.AddClassFragment"
+        android:label="AddClass"
+        tools:layout="@layout/fragment_add_class">
+
+        <action
+            android:id="@+id/action_navigation_addClass_to_navigation_schedule"
+            app:destination="@id/navigation_schedule" />
+    </fragment>
+
 
     <fragment
         android:id="@+id/navigation_profile"
@@ -36,4 +50,5 @@
         tools:layout="@layout/session" >
 
     </fragment>
+
 </navigation>
