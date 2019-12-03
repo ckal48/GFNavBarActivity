@@ -80,11 +80,12 @@
         android:id="@+id/startTimeText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAlignment="center"
         android:text="Start Time:"
         android:textColor="@color/white"
         android:layout_marginTop="10dp"/>
 
-    <Button
+    <!--<Button
         android:id="@+id/startTimer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -93,22 +94,42 @@
         android:visibility="visible"
         android:background="@color/darkGray"
         android:textColor="@color/white"/>
+     -->
+
+    <EditText
+        android:id="@+id/classInputStart"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter class"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
 
     <TextView
         android:id="@+id/endTimeText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAlignment="center"
         android:text="End Time:"
         android:textColor="@color/white"
         />
 
-    <Button
+    <!--<Button
         android:id="@+id/endTimer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Choose the end time"
         android:textSize="24dp"
         android:background="@color/darkGray"/>
+    -->
+
+    <EditText
+        android:id="@+id/classInputEnd"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter class"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
 
     <RelativeLayout
         android:layout_width="match_parent"

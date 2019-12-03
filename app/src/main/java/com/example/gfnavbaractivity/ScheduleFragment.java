@@ -40,6 +40,18 @@ public class ScheduleFragment extends Fragment {
         */
         //display manual class input
 
+        final Course[] classes = {};
+        ListView listView = view.findViewById(R.id.classesList);
+
+        ArrayAdapter<Course> listViewAdapter = new ArrayAdapter<>(
+                getActivity(),
+                android.R.layout.simple_list_item_1,
+                classes
+        );
+
+        listView.setAdapter(listViewAdapter);
+        //display user class input
+
         Button mButton = view.findViewById(R.id.addClassBtn);
         mButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_navigation_schedule_to_navigation_addClass, null));
         //switch schedule layout to add class layout

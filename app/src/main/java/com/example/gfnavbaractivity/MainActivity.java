@@ -17,6 +17,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.NavDestination;
 
@@ -31,24 +32,6 @@ public class MainActivity extends AppCompatActivity {
 
         final BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
-
-        /*NavController navController = new NavController((this.getApplicationContext()));
-        //not sure if navcontroller is properly instantiated
-        navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
-            @Override
-            public void onDestinationChanged(@NonNull NavController controller,
-                                             @NonNull NavDestination destination, @Nullable Bundle arguments) {
-                if(destination.getId() == R.id.action_navigation_schedule_to_navigation_addClass) {
-                    bottomNav.setVisibility(View.GONE);
-                }
-                else {
-                    bottomNav.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-
-         */
-        //makes the bottomnavbar disappear when on add class screen
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new StartFragment()).commit();
