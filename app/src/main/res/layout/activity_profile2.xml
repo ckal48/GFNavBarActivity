@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/background">
 
     <TextView
@@ -14,14 +16,17 @@
         android:text="@string/name"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    <TextView
-        android:id = "@+id/name"
-        android:text = "@string/your_name"
+    <EditText
+        android:id = "@+id/text1"
         android:layout_width="250dp"
         android:layout_height="30dp"
         android:layout_marginStart ="130dp"
         android:layout_marginTop="100dp"
-        android:background="#FFFFFF" />
+        android:inputType="text"
+        android:background="#FFFFFF"
+        tools:ignore="LabelFor"
+        tools:targetApi="o"
+        android:importantForAutofill="no"/>
 
     <TextView
         android:layout_width="90dp"
@@ -33,14 +38,18 @@
         android:text="@string/major"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    <TextView
-        android:id = "@+id/major"
-        android:text = "@string/your_major"
+    <EditText
+        android:id = "@+id/text2"
         android:layout_width="250dp"
         android:layout_height="30dp"
         android:layout_marginStart ="130dp"
         android:layout_marginTop="150dp"
-        android:background="#FFFFFF" />
+        android:inputType="text"
+        android:background="#FFFFFF"
+        tools:ignore="LabelFor"
+        tools:targetApi="o"
+        android:importantForAutofill="no"/>
+
 
     <TextView
         android:layout_width="90dp"
@@ -52,14 +61,17 @@
         android:text="@string/motto"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    <TextView
-        android:id = "@+id/motto"
-        android:text = "@string/your_words_to_live_by"
+    <EditText
+        android:id = "@+id/text3"
         android:layout_width="250dp"
         android:layout_height="30dp"
         android:layout_marginStart ="130dp"
         android:layout_marginTop="200dp"
-        android:background="#FFFFFF" />
+        android:inputType="text"
+        android:background="#FFFFFF"
+        tools:ignore="LabelFor"
+        tools:targetApi="o"
+        android:importantForAutofill="no"/>
 
     <TextView
         android:layout_width="120dp"
@@ -71,22 +83,24 @@
         android:text="@string/description"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    <TextView
-        android:id = "@+id/description"
-        android:text = "@string/fill_in"
+    <EditText
+        android:id = "@+id/text4"
         android:layout_width="350dp"
         android:layout_height="150dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="375dp"
-        android:background="#FFFFFF"/>
+        android:inputType="text"
+        android:background="#FFFFFF"
+        android:autofillHints="no"
+        tools:ignore="LabelFor"
+        tools:targetApi="o"/>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart = "290dp"
         android:layout_marginTop = "560dp"
-        android:text = "@string/change" />
-
+        android:text = "@string/save" />
 
 </RelativeLayout>
