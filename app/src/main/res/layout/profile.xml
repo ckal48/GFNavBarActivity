@@ -14,15 +14,14 @@
         android:text="@string/name"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <TextView
+        android:id = "@+id/name"
+        android:text = "@string/your_name"
         android:layout_width="250dp"
         android:layout_height="30dp"
         android:layout_marginStart ="130dp"
         android:layout_marginTop="100dp"
-        android:background="#FFFFFF"
-        android:hint="@string/your_name">
-
-    </com.google.android.material.textfield.TextInputLayout>
+        android:background="#FFFFFF" />
 
     <TextView
         android:layout_width="90dp"
@@ -34,15 +33,14 @@
         android:text="@string/major"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <TextView
+        android:id = "@+id/major"
+        android:text = "@string/your_major"
         android:layout_width="250dp"
         android:layout_height="30dp"
         android:layout_marginStart ="130dp"
         android:layout_marginTop="150dp"
-        android:background="#FFFFFF"
-        android:hint="@string/your_major">
-
-    </com.google.android.material.textfield.TextInputLayout>
+        android:background="#FFFFFF" />
 
     <TextView
         android:layout_width="90dp"
@@ -54,15 +52,14 @@
         android:text="@string/motto"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <TextView
+        android:id = "@+id/motto"
+        android:text = "@string/your_words_to_live_by"
         android:layout_width="250dp"
         android:layout_height="30dp"
         android:layout_marginStart ="130dp"
         android:layout_marginTop="200dp"
-        android:background="#FFFFFF"
-        android:hint="@string/your_words_to_live_by">
-
-    </com.google.android.material.textfield.TextInputLayout>
+        android:background="#FFFFFF" />
 
     <TextView
         android:layout_width="120dp"
@@ -74,15 +71,14 @@
         android:text="@string/description"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <TextView
+        android:id = "@+id/description"
+        android:text = "@string/fill_in"
         android:layout_width="350dp"
         android:layout_height="150dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="375dp"
-        android:background="#FFFFFF"
-        android:hint="@string/type_here">
-
-    </com.google.android.material.textfield.TextInputLayout>
+        android:background="#FFFFFF"/>
 
     <Button
         android:id="@+id/button"
