@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/background">
 
     <TextView
@@ -14,15 +16,17 @@
         android:text="@string/name"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
+        android:id = "@+id/text1"
         android:layout_width="250dp"
         android:layout_height="30dp"
         android:layout_marginStart ="130dp"
         android:layout_marginTop="100dp"
+        android:inputType="text"
         android:background="#FFFFFF"
-        android:hint="@string/your_name">
-
-    </com.google.android.material.textfield.TextInputLayout>
+        tools:ignore="LabelFor"
+        tools:targetApi="o"
+        android:importantForAutofill="no"/>
 
     <TextView
         android:layout_width="90dp"
@@ -34,15 +38,18 @@
         android:text="@string/major"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
+        android:id = "@+id/text2"
         android:layout_width="250dp"
         android:layout_height="30dp"
         android:layout_marginStart ="130dp"
         android:layout_marginTop="150dp"
+        android:inputType="text"
         android:background="#FFFFFF"
-        android:hint="@string/your_major">
+        tools:ignore="LabelFor"
+        tools:targetApi="o"
+        android:importantForAutofill="no"/>
 
-    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:layout_width="90dp"
@@ -54,15 +61,17 @@
         android:text="@string/motto"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
+        android:id = "@+id/text3"
         android:layout_width="250dp"
         android:layout_height="30dp"
         android:layout_marginStart ="130dp"
         android:layout_marginTop="200dp"
+        android:inputType="text"
         android:background="#FFFFFF"
-        android:hint="@string/your_words_to_live_by">
-
-    </com.google.android.material.textfield.TextInputLayout>
+        tools:ignore="LabelFor"
+        tools:targetApi="o"
+        android:importantForAutofill="no"/>
 
     <TextView
         android:layout_width="120dp"
@@ -74,15 +83,17 @@
         android:text="@string/description"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
+        android:id = "@+id/text4"
         android:layout_width="350dp"
         android:layout_height="150dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="375dp"
+        android:inputType="text"
         android:background="#FFFFFF"
-        android:hint="@string/type_here">
-
-    </com.google.android.material.textfield.TextInputLayout>
+        android:autofillHints="no"
+        tools:ignore="LabelFor"
+        tools:targetApi="o"/>
 
     <Button
         android:id="@+id/button2"
