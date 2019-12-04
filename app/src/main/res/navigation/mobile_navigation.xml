@@ -42,11 +42,40 @@
 
     </fragment>
 
+
     <fragment
         android:id="@+id/navigation_session"
         android:name="com.example.gfnavbaractivity.SessionFragment"
         android:label="@string/title_session"
-        tools:layout="@layout/session"
-        />
+        tools:layout="@layout/session">
+
+        <action
+            android:id="@+id/action_navigation_session_to_navigation_session_create"
+            app:destination="@id/navigation_session_create" />
+
+        <action
+            android:id="@+id/action_navigation_session_to_navigation_session_edit"
+            app:destination="@+id/navigation_session_edit" />
+    </fragment>
+
+        <fragment
+    android:id="@+id/navigation_session_create"
+    android:name="com.example.gfnavbaractivity.SessionCreateFragment"
+    android:label="Session Create"
+    tools:layout="@layout/session_create">
+
+</fragment>
+
+    <fragment
+        android:id="@+id/navigation_session_edit"
+        android:name="com.example.gfnavbaractivity.SessionEditFragment"
+        android:label="Session Edit"
+        tools:layout="@layout/session_edit">
+
+
+
+    </fragment>
+
+
 
 </navigation>
