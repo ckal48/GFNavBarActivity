@@ -14,10 +14,9 @@ import androidx.fragment.app.Fragment;
 public class ProfileFragment extends Fragment {
     private Button button;
 
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+        View view = inflater.inflate(R.layout.profile, container, false);
 
         button = (Button) getView().findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener(){
@@ -26,7 +25,8 @@ public class ProfileFragment extends Fragment {
                 openActivity2();
             }
         });
-        return inflater.inflate(R.layout.profile, container, false);
+
+        return view;
     }
 
     public void openActivity2(){
