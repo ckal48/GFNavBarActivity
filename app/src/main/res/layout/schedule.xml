@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/background"
-    >
+    android:layout_height="match_parent">
 
     <Button
         android:id="@+id/addClassBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="206dp"
         android:layout_height="wrap_content"
         android:text="Add Class"
         android:background="@color/darkGray"
@@ -16,22 +14,47 @@
         />
 
     <Button
-        android:id="@+id/deleteClassBtn"
+        android:id="@+id/submitClassForReal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Delete Class"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="135dp"
         android:background="@color/darkGray"
+        android:text="Submit"
         android:textColor="@color/white"
-        android:layout_alignParentLeft="true"
         />
 
+
+    <Button
+        android:id="@+id/deleteClassBtn"
+        android:layout_width="206dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:background="@color/darkGray"
+        android:text="Delete Class"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/typedata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:hint="Course#, Class, Professor"
+        />
+
+    <EditText
+        android:id="@+id/typedata2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:hint="Days of Week, Class Time, Building"
+        />
 
     <ListView
         android:id="@+id/classesList"
         android:layout_width="match_parent"
         android:layout_height="638dp"
-        android:layout_below="@+id/addClassBtn"
-        android:layout_alignTop="@+id/addClassBtn"
-        android:layout_marginTop="48dp" />
+        android:layout_marginTop="185dp" />
 
 </RelativeLayout>

@@ -24,21 +24,13 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-
-
         final BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
-
-
 
         /*NavController navController = new NavController((this.getApplicationContext()));
         //not sure if navcontroller is properly instantiated
@@ -65,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
         startmessage.setGravity(Gravity.BOTTOM,0,250);
         startmessage.show();
     }
-
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -96,8 +87,6 @@ public class MainActivity extends AppCompatActivity {
 
                 }
             };
-
-
 
 }
 
