@@ -16,58 +16,93 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import java.util.ArrayList;
+
+//import static com.example.gfnavbaractivity.ScheduleFragment.arrayList;
+//import static com.example.gfnavbaractivity.ScheduleFragment.listViewAdapter;
+
 
 public class AddClassFragment extends Fragment {
-    //implements TimePickerDialog.OnTimeSetListener
+    EditText className;
+    Switch mSwitch;
+    Switch tSwitch;
+    Switch wSwitch;
+    Switch rSwitch;
+    Switch fSwitch;
+    Switch sASwitch;
+    Switch sUSwitch;
+    EditText classStart;
+    EditText classEnd;
+
+    Button submitBtn;
+    Button cancelBtn;
+
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_add_class, container, false);
         //content to make add class layout appear
 
-
-        Button mButton = view.findViewById(R.id.cancelClassBtn);
-        mButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_navigation_addClass_to_navigation_schedule, null));
-        //cancel class button returns to schedule screen
-
-
-        /*Button startTimePickerButton = view.findViewById(R.id.startTimer);
+        Button startTimePickerButton = view.findViewById(R.id.startTimer);
         startTimePickerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DialogFragment startTimePicker = new TimePickerFragment();
                 startTimePicker.show(getFragmentManager(), "time picker" );
             }
-        });//create time picker
-         */
+        });
 
-        Switch mSwitch = view.findViewById(R.id.switchMonday);
-            Switch tSwitch = view.findViewById(R.id.switchTuesday);
-        Switch wSwitch = view.findViewById(R.id.switchWednesday);
-        Switch rSwitch = view.findViewById(R.id.switchThursday);
-        Switch fSwitch = view.findViewById(R.id.switchFriday);
-        Switch sASwitch = view.findViewById(R.id.switchSaturday);
-        Switch sUSwitch = view.findViewById(R.id.switchSunday);
-        EditText className = view.findViewById(R.id.classInputText);
-        EditText classStart = view.findViewById(R.id.classInputStart);
-        EditText classEnd = view.findViewById(R.id.classInputEnd);
+        Button endTimePickerButton = view.findViewById(R.id.endTimer);
+        endTimePickerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment endTimePicker = new TimePickerFragment();
+                endTimePicker.show(getFragmentManager(), "time picker" );
+            }
+        });//create time pickers
 
-
+        className = view.findViewById(R.id.classInputText);
+        mSwitch = view.findViewById(R.id.switchMonday);
+        tSwitch = view.findViewById(R.id.switchTuesday);
+        wSwitch = view.findViewById(R.id.switchWednesday);
+        rSwitch = view.findViewById(R.id.switchThursday);
+        fSwitch = view.findViewById(R.id.switchFriday);
+        sASwitch = view.findViewById(R.id.switchSaturday);
+        sUSwitch = view.findViewById(R.id.switchSunday);
+        //classStart = view.findViewById(R.id.classInputStart);
+        //classEnd = view.findViewById(R.id.classInputEnd);
         //instantiate all input data
 
+        submitBtn = view.findViewById(R.id.submitClassBtn);
+        onSubmitClick();
+        //create course class to be later inputted and return to schedule?
 
-
-        Course inputClass = new Course(className.getText().toString(), mSwitch.isChecked(), tSwitch.isChecked(), wSwitch.isChecked(),
-                rSwitch.isChecked(), fSwitch.isChecked(), sASwitch.isChecked(), sUSwitch.isChecked(),
-                classStart.getText().toString(), classEnd.getText().toString());
-        //create course object based off of input information
-
+        cancelBtn = view.findViewById(R.id.cancelClassBtn);
+        cancelBtn.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_navigation_addClass_to_navigation_schedule, null));
+        //cancel button returns to schedule screen
 
         return view;
         //make add class layout appear
+    }
+
+    public void onSubmitClick(){
+
+        submitBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Course c = new Course(className.getText().toString(), classStart.getText().toString());
+                ScheduleFragment s = new ScheduleFragment();
+                s.newCourse = c;
+            }
+        });
+
+        submitBtn.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_navigation_addClass_to_navigation_schedule, null));
+        //submit button returns to schedule screen
     }
 }

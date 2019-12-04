@@ -85,7 +85,7 @@
         android:textColor="@color/white"
         android:layout_marginTop="10dp"/>
 
-    <!--<Button
+    <Button
         android:id="@+id/startTimer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -94,16 +94,16 @@
         android:visibility="visible"
         android:background="@color/darkGray"
         android:textColor="@color/white"/>
-     -->
 
-    <EditText
+
+    <!--<EditText
         android:id="@+id/classInputStart"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="Enter class"
         android:textColor="@color/white"
         android:textSize="20dp" />
-
+    -->
 
     <TextView
         android:id="@+id/endTimeText"
@@ -114,30 +114,30 @@
         android:textColor="@color/white"
         />
 
-    <!--<Button
+    <Button
         android:id="@+id/endTimer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Choose the end time"
         android:textSize="24dp"
         android:background="@color/darkGray"/>
-    -->
 
-    <EditText
+
+    <!--<EditText
         android:id="@+id/classInputEnd"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="Enter class"
         android:textColor="@color/white"
         android:textSize="20dp" />
-
+        -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp">
 
         <Button
-            android:id="@+id/saveClassBtn"
+            android:id="@+id/submitClassBtn"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="false"

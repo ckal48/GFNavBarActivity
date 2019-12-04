@@ -10,14 +10,14 @@ public class Course {
     Boolean saturday;
     Boolean sunday;
     String startTime;
-    String endTime;      //not sure what
-                        // values time gives
-                       //use String for now...
 
-    public Course(String courseName, Boolean m, Boolean t,
-                  Boolean w, Boolean r, Boolean f, Boolean sA,
-                  Boolean sU, String sTime, String eTime){
+
+
+    public Course(String courseName,
+                  //Boolean m, Boolean t, Boolean w, Boolean r, Boolean f, Boolean sA, Boolean sU,
+                  String sTime){
         title = courseName;
+        /*
         monday = m;
         tuesday = t;
         wednesday = w;
@@ -25,7 +25,11 @@ public class Course {
         friday = f;
         saturday = sA;
         sunday = sU;
+         */
         startTime = sTime;
-        endTime = eTime;
+    }
+
+    public String makeListItem(){
+        return title + " \n" + startTime;
     }
 }
