@@ -24,21 +24,13 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button createButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //code for create button in Session layout
-        createButton = findViewById(R.id.createButton);
-        createButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openCreateButtonActivity();
-            }
-        });
 
 
 
@@ -74,10 +66,6 @@ public class MainActivity extends AppCompatActivity {
         startmessage.show();
     }
 
-    public void openCreateButtonActivity() {
-        Intent intent = new Intent(this, CreateButtonActitivity.class);
-        startActivity(intent);
-    }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
