@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/navigation_schedule">
+    app:startDestination="@id/navigate_startScreen">
 
     <fragment
         android:id="@+id/navigation_schedule"
@@ -48,5 +48,16 @@
         android:label="@string/title_session"
         tools:layout="@layout/session"
         />
+
+    <fragment
+        android:id="@+id/navigate_startScreen"
+        android:name="com.example.gfnavbaractivity.StartFragment"
+        android:label="Start"
+        tools:layout="@layout/home_screen">
+
+        <action
+            android:id="@+id/action_navigation_startScreen_to_schedule"
+            app:destination="@id/navigation_schedule"/>
+    </fragment>
 
 </navigation>

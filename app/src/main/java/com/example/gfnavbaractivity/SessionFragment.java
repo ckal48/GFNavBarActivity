@@ -13,16 +13,9 @@ import androidx.navigation.Navigation;
 
 public class SessionFragment extends Fragment {
 
-    Button sessionScreen;
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.session, container, false);
-
-        sessionScreen= view.findViewById(R.id.createButton);
-        sessionScreen.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_navigation_session_to_navigation_activity_create_button_activity, null));
-
-        return view;
+        return inflater.inflate(R.layout.session, container, false);
     }
 }
