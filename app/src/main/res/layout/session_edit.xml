@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="52dp"
         android:background="#808080"
-        android:text="Session Name"
+        android:text="Change Session Name"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFF"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
@@ -34,7 +34,7 @@
         android:layout_marginTop="185dp"
         android:layout_marginBottom="299dp"
         android:background="#FFFFFF"
-        android:hint="Name Your Session"
+        android:hint="Update Session Name"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayout3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
@@ -45,11 +45,11 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="90dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="422dp"
         android:background="#808080"
-        android:text="Subject"
+        android:text="Change Subject"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -66,7 +66,7 @@
         android:layout_height="32dp"
         android:layout_marginBottom="345dp"
         android:background="#FFFFFF"
-        android:hint="Subject of Interest"
+        android:hint="Update Subject of Interest"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
@@ -79,7 +79,7 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="90dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="274dp"
         android:background="#808080"
@@ -99,7 +99,7 @@
         android:layout_height="32dp"
         android:layout_marginBottom="241dp"
         android:background="#FFFFFF"
-        android:hint="Location of Session"
+        android:hint="Update Location of Session"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
@@ -110,7 +110,3 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
