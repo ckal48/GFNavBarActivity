@@ -21,4 +21,5 @@
     <string name="save">Save</string>
     <string name="change">Change</string>
     <string name="fill_in">Fill in</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
