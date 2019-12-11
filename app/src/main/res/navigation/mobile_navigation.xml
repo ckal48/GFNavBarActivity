@@ -31,7 +31,6 @@
         android:name="com.example.gfnavbaractivity.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/profile" >
-
     </fragment>
 
     <fragment
@@ -39,7 +38,6 @@
         android:name="com.example.gfnavbaractivity.MapFragment"
         android:label="@string/title_map"
         tools:layout="@layout/map" >
-
     </fragment>
 
 
@@ -63,17 +61,13 @@
     android:name="com.example.gfnavbaractivity.SessionCreateFragment"
     android:label="Session Create"
     tools:layout="@layout/session_create">
-
-</fragment>
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_session_edit"
         android:name="com.example.gfnavbaractivity.SessionEditFragment"
         android:label="Session Edit"
         tools:layout="@layout/session_edit">
-
-
-
     </fragment>
 
 
