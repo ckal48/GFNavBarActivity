@@ -11,27 +11,27 @@
         android:background="#808080"
         android:text="Create"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="200dp"
         android:textColor="#FFFF"/>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/editButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#808080"
         android:text="Edit"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="340dp"
+        android:layout_marginTop="285dp"
         android:textColor="#FFFF"/>
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/inviteButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#808080"
         android:text="Invite"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="430dp"
+        android:layout_marginTop="370dp"
         android:textColor="#FFFF"/>
 
 </RelativeLayout>

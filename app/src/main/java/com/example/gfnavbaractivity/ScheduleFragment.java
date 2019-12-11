@@ -18,8 +18,6 @@ import androidx.navigation.Navigation;
 
 import java.util.ArrayList;
 
-import static androidx.navigation.Navigation.createNavigateOnClickListener;
-
 public class ScheduleFragment extends Fragment {
 
     Button addButton;

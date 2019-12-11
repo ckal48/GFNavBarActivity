@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new StartFragment()).commit();
 
+
         Toast startmessage = Toast.makeText(getApplicationContext(), "Welcome to GrizzFinder! Click to continue",Toast.LENGTH_LONG);
         startmessage.setGravity(Gravity.BOTTOM,0,250);
         startmessage.show();

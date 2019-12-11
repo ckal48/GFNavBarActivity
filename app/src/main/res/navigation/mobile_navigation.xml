@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/navigation_schedule">
+    app:startDestination="@id/navigate_startScreen">
 
     <fragment
         android:id="@+id/navigation_schedule"
@@ -26,13 +26,26 @@
             app:destination="@id/navigation_schedule" />
     </fragment>
 
-
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.example.gfnavbaractivity.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/profile" >
 
+        <action
+            android:id="@+id/action_navigation_profile_to_navigation_profile2"
+            app:destination="@id/navigation_profile2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile2"
+        android:name="com.example.gfnavbaractivity.profile2"
+        android:label="profile2"
+        tools:layout="@layout/activity_profile2">
+
+        <action
+            android:id="@+id/action_navigation_profile2_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
     </fragment>
 
     <fragment
@@ -40,15 +53,49 @@
         android:name="com.example.gfnavbaractivity.MapFragment"
         android:label="@string/title_map"
         tools:layout="@layout/map" >
-
     </fragment>
+
 
     <fragment
         android:id="@+id/navigation_session"
         android:name="com.example.gfnavbaractivity.SessionFragment"
         android:label="@string/title_session"
-        tools:layout="@layout/session" >
+        tools:layout="@layout/session">
 
+        <action
+            android:id="@+id/action_navigation_session_to_navigation_session_create"
+            app:destination="@id/navigation_session_create" />
+
+        <action
+            android:id="@+id/action_navigation_session_to_navigation_session_edit"
+            app:destination="@+id/navigation_session_edit" />
+    </fragment>
+
+        <fragment
+    android:id="@+id/navigation_session_create"
+    android:name="com.example.gfnavbaractivity.SessionCreateFragment"
+    android:label="Session Create"
+    tools:layout="@layout/session_create">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_session_edit"
+        android:name="com.example.gfnavbaractivity.SessionEditFragment"
+        android:label="Session Edit"
+        tools:layout="@layout/session_edit">
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/navigate_startScreen"
+        android:name="com.example.gfnavbaractivity.StartFragment"
+        android:label="Start"
+        tools:layout="@layout/home_screen">
+
+        <action
+            android:id="@+id/action_navigation_startScreen_to_schedule"
+            app:destination="@id/navigation_schedule"/>
     </fragment>
 
 </navigation>
