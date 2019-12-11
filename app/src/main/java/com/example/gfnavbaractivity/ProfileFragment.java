@@ -21,27 +21,31 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View view = inflater.inflate(R.layout.profile, container, false);
 
-        button = (Button) getView().findViewById(R.id.button);
-        name = (TextView) getView().findViewById(R.id.name);
-        major = (TextView) getView().findViewById(R.id.major);
-        motto = (TextView) getView().findViewById(R.id.motto);
-        description = (TextView) getView().findViewById(R.id.description);
-        st1 = getIntent().getExtras().getString("your_name");
-        st2 = getIntent().getExtras().getString("your_major");
-        st3 = getIntent().getExtras().getString("your_words_to_live_by");
-        st4 = getIntent().getExtras().getString("fill_in");
-        name.setText(st1);
-        major.setText(st2);
-        motto.setText(st3);
-        description.setText(st4);
+        try {
+            button = (Button) (view.findViewById(R.id.button));
+            name = (TextView) (view.findViewById(R.id.name));
+            major = (TextView) (view.findViewById(R.id.major));
+            motto = (TextView) (view.findViewById(R.id.motto));
+            description = (TextView) (view.findViewById(R.id.description));
+            st1 = (String) getActivity().getIntent().getExtras().getString("your_name");
+            st2 = (String) getActivity().getIntent().getExtras().getString("your_major");
+            st3 = (String) getActivity().getIntent().getExtras().getString("your_words_to_live_by");
+            st4 = (String) getActivity().getIntent().getExtras().getString("fill_in");
+            name.setText(st1);
+            major.setText(st2);
+            motto.setText(st3);
+            description.setText(st4);
 
 
-        button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                openActivity2();
-            }
-        });
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    openActivity2();
+                }
+            });
+        }catch(Exception e) {
+            //There was an error
+        }
 
         return view;
     }
