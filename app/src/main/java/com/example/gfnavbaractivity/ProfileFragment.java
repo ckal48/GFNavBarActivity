@@ -28,14 +28,7 @@ public class ProfileFragment extends Fragment {
             major = view.findViewById(R.id.major);
             motto = view.findViewById(R.id.motto);
             description = view.findViewById(R.id.description);
-            st1 = getActivity().getIntent().getExtras().getString("your_name");
-            st2 = getActivity().getIntent().getExtras().getString("your_major");
-            st3 = getActivity().getIntent().getExtras().getString("your_words_to_live_by");
-            st4 = getActivity().getIntent().getExtras().getString("fill_in");
-            name.setText(st1);
-            major.setText(st2);
-            motto.setText(st3);
-            description.setText(st4);
+
 
             onBtnClick();
             button.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.navigation_profile2, null));
@@ -52,6 +45,14 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v){
                 Intent intent = new Intent(ProfileFragment.this.getActivity(), profile2.class);
+                st1 = getActivity().getIntent().getExtras().getString("your_name");
+                st2 = getActivity().getIntent().getExtras().getString("your_major");
+                st3 = getActivity().getIntent().getExtras().getString("your_words_to_live_by");
+                st4 = getActivity().getIntent().getExtras().getString("fill_in");
+                name.setText(st1);
+                major.setText(st2);
+                motto.setText(st3);
+                description.setText(st4);
                 startActivity(intent);
             }
         });
