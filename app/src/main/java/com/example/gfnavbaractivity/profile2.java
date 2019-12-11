@@ -28,10 +28,10 @@ public class profile2 extends Fragment {
         View view = inflater.inflate(R.layout.activity_profile2, container, false);
 
         mButton = view.findViewById(R.id.button2);
-        EditText text1 = view.findViewById(R.id.text1);
-        EditText text2 = view.findViewById(R.id.text2);
-        EditText text3 = view.findViewById(R.id.text3);
-        EditText text4 = view.findViewById(R.id.text4);
+        EditText text1 = (EditText) view.findViewById(R.id.text1);
+        EditText text2 = (EditText) view.findViewById(R.id.text2);
+        EditText text3 = (EditText) view.findViewById(R.id.text3);
+        EditText text4 = (EditText) view.findViewById(R.id.text4);
 
         onBtnClick();
         mButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.navigation_profile, null));
@@ -43,14 +43,14 @@ public class profile2 extends Fragment {
         mButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent one = new Intent(getActivity(), ProfileFragment.class);
-                Intent two = new Intent(getActivity(), ProfileFragment.class);
-                Intent three = new Intent(getActivity(), ProfileFragment.class);
-                Intent four = new Intent(getActivity(), ProfileFragment.class);
                 st1 = text1.getText().toString();
                 st2 = text2.getText().toString();
                 st3 = text3.getText().toString();
                 st4 = text4.getText().toString();
+                Intent one = new Intent(getActivity(), ProfileFragment.class);
+                Intent two = new Intent(getActivity(), ProfileFragment.class);
+                Intent three = new Intent(getActivity(), ProfileFragment.class);
+                Intent four = new Intent(getActivity(), ProfileFragment.class);
                 one.putExtra("your_name", st1);
                 two.putExtra("your_major", st2);
                 three.putExtra("your_words_to_live_by", st3);

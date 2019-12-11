@@ -24,11 +24,10 @@ public class ProfileFragment extends Fragment {
 
         try {
             button = view.findViewById(R.id.button);
-            name = view.findViewById(R.id.name);
-            major = view.findViewById(R.id.major);
-            motto = view.findViewById(R.id.motto);
-            description = view.findViewById(R.id.description);
-
+            name = (TextView) view.findViewById(R.id.name);
+            major = (TextView) view.findViewById(R.id.major);
+            motto = (TextView) view.findViewById(R.id.motto);
+            description = (TextView) view.findViewById(R.id.description);
 
             onBtnClick();
             button.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.navigation_profile2, null));
@@ -45,9 +44,6 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v){
                 Intent one = new Intent(getActivity(), profile2.class);
-                Intent two = new Intent(getActivity(), profile2.class);
-                Intent three = new Intent(getActivity(), profile2.class);
-                Intent four = new Intent(getActivity(), profile2.class);
                 st1 = getActivity().getIntent().getExtras().getString("your_name");
                 st2 = getActivity().getIntent().getExtras().getString("your_major");
                 st3 = getActivity().getIntent().getExtras().getString("your_words_to_live_by");
@@ -57,9 +53,6 @@ public class ProfileFragment extends Fragment {
                 motto.setText(st3);
                 description.setText(st4);
                 startActivity(one);
-                startActivity(two);
-                startActivity(three);
-                startActivity(four);
             }
         });
     }
