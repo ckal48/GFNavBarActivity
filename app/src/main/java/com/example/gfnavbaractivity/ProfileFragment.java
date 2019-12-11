@@ -11,44 +11,49 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 public class ProfileFragment extends Fragment {
-    private Button button;
-    private TextView name, major, motto, description;
-    private String st1, st2, st3, st4;
+    Button button;
+    TextView name, major, motto, description;
+    String st1, st2, st3, st4;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
         View view = inflater.inflate(R.layout.profile, container, false);
 
-        button = (Button) getView().findViewById(R.id.button);
-        name = (TextView) getView().findViewById(R.id.name);
-        major = (TextView) getView().findViewById(R.id.major);
-        motto = (TextView) getView().findViewById(R.id.motto);
-        description = (TextView) getView().findViewById(R.id.description);
-        //st1 = getIntent().getExtras().getString("your_name");
-        //st2 = getIntent().getExtras().getString("your_major");
-        //st3 = getIntent().getExtras().getString("your_words_to_live_by");
-        //st4 = getIntent().getExtras().getString("fill_in");
-        name.setText(st1);
-        major.setText(st2);
-        motto.setText(st3);
-        description.setText(st4);
+        try {
+            button = view.findViewById(R.id.button);
+            name = (TextView) view.findViewById(R.id.name);
+            major = (TextView) view.findViewById(R.id.major);
+            motto = (TextView) view.findViewById(R.id.motto);
+            description = (TextView) view.findViewById(R.id.description);
 
+            onBtnClick();
+            button.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.navigation_profile2, null));
 
-        button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                openActivity2();
-            }
-        });
+        }catch(Exception e) {
+            //There was an error
+        }
 
         return view;
     }
 
-    public void openActivity2(){
-        Intent intent = new Intent(ProfileFragment.this.getActivity(), profile2.class);
-        startActivity(intent);
+    public void onBtnClick(){
+        button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent one = new Intent(getActivity(), profile2.class);
+                st1 = getActivity().getIntent().getExtras().getString("your_name");
+                st2 = getActivity().getIntent().getExtras().getString("your_major");
+                st3 = getActivity().getIntent().getExtras().getString("your_words_to_live_by");
+                st4 = getActivity().getIntent().getExtras().getString("fill_in");
+                name.setText(st1);
+                major.setText(st2);
+                motto.setText(st3);
+                description.setText(st4);
+                startActivity(one);
+            }
+        });
     }
-
 }
