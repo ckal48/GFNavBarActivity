@@ -44,7 +44,10 @@ public class ProfileFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intent = new Intent(ProfileFragment.this.getActivity(), profile2.class);
+                Intent one = new Intent(getActivity(), profile2.class);
+                Intent two = new Intent(getActivity(), profile2.class);
+                Intent three = new Intent(getActivity(), profile2.class);
+                Intent four = new Intent(getActivity(), profile2.class);
                 st1 = getActivity().getIntent().getExtras().getString("your_name");
                 st2 = getActivity().getIntent().getExtras().getString("your_major");
                 st3 = getActivity().getIntent().getExtras().getString("your_words_to_live_by");
@@ -53,7 +56,10 @@ public class ProfileFragment extends Fragment {
                 major.setText(st2);
                 motto.setText(st3);
                 description.setText(st4);
-                startActivity(intent);
+                startActivity(one);
+                startActivity(two);
+                startActivity(three);
+                startActivity(four);
             }
         });
     }
