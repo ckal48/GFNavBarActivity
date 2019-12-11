@@ -33,24 +33,33 @@ public class profile2 extends Fragment {
         EditText text3 = view.findViewById(R.id.text3);
         EditText text4 = view.findViewById(R.id.text4);
 
+        onBtnClick();
         mButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.navigation_profile, null));
-        Intent one = new Intent(getActivity(), ProfileFragment.class);
-        Intent two = new Intent(getActivity(), ProfileFragment.class);
-        Intent three = new Intent(getActivity(), ProfileFragment.class);
-        Intent four = new Intent(getActivity(), ProfileFragment.class);
-        st1 = text1.getText().toString();
-        st2 = text2.getText().toString();
-        st3 = text3.getText().toString();
-        st4 = text4.getText().toString();
-        one.putExtra("your_name", st1);
-        two.putExtra("your_major", st2);
-        three.putExtra("your_words_to_live_by", st3);
-        four.putExtra("fill_in", st4);
-        startActivity(one);
-        startActivity(two);
-        startActivity(three);
-        startActivity(four);
 
         return view;
+    }
+
+    public void onBtnClick(){
+        mButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent one = new Intent(getActivity(), ProfileFragment.class);
+                Intent two = new Intent(getActivity(), ProfileFragment.class);
+                Intent three = new Intent(getActivity(), ProfileFragment.class);
+                Intent four = new Intent(getActivity(), ProfileFragment.class);
+                st1 = text1.getText().toString();
+                st2 = text2.getText().toString();
+                st3 = text3.getText().toString();
+                st4 = text4.getText().toString();
+                one.putExtra("your_name", st1);
+                two.putExtra("your_major", st2);
+                three.putExtra("your_words_to_live_by", st3);
+                four.putExtra("fill_in", st4);
+                startActivity(one);
+                startActivity(two);
+                startActivity(three);
+                startActivity(four);
+            }
+        });
     }
 }

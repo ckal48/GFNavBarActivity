@@ -37,7 +37,7 @@ public class ProfileFragment extends Fragment {
             motto.setText(st3);
             description.setText(st4);
 
-
+            onBtnClick();
             button.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.navigation_profile2, null));
 
         }catch(Exception e) {
@@ -45,5 +45,15 @@ public class ProfileFragment extends Fragment {
         }
 
         return view;
+    }
+
+    public void onBtnClick(){
+        button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(ProfileFragment.this.getActivity(), profile2.class);
+                startActivity(intent);
+            }
+        });
     }
 }
